@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Mainsection from './components/Mainsection';
+import img from './image/pic.jpg';
 
 function App() {
+  const temparry = [
+    {
+      fName: 'dsdas',
+      lName: 'patle',
+      email: 'dsadsa@ds.com',
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App' data-test='AppComponent'>
+      <Header />
+      <Mainsection
+        title={'Life is Just a Simple game of not Getting Fu****d'}
+        temparr={temparry}
+        image={img}
+        desc={
+          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum itaque magnam quibusdam autem debitis asperiores voluptates perferendis consectetur aperiam dicta eius, dolor dolores error quam beatae ullam, iste ratione. Exercitationem.'
+        }
+      />
     </div>
   );
 }
